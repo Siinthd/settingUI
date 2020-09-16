@@ -30,3 +30,19 @@ std::string settingutil::getHostname(){
 std::string settingutil::getUsername(){
     return m_username.toStdString();
 }
+
+std::string settingutil::getPortname(){
+    return m_portname.toStdString();
+}
+
+void settingutil::setHostname(){
+
+}
+
+void settingutil::setPortname(){
+
+}
+
+void settingutil::setUsername(){
+
+}

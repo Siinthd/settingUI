@@ -11,12 +11,21 @@ public:
     void ReadSettings();
     void WriteSettings();
     void SetDefaultSettings();
+
     std::string getHostname();
+    void setHostname();
+
+    std::string getPortname();
+    void setPortname();
+
     std::string getUsername();
+    void setUsername();
+
 private:
     QSettings m_settings;
     QString m_hostname;
     QString m_username;
+    QString m_portname;
 };
 
 
