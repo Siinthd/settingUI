@@ -33,7 +33,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>CommandLinkButton</string>
+    <string>1</string>
    </property>
   </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton_2">
@@ -46,7 +46,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>CommandLinkButton</string>
+    <string>2</string>
    </property>
   </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton_3">
@@ -59,7 +59,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>CommandLinkButton</string>
+    <string>3</string>
    </property>
   </widget>
   <widget class="QCommandLinkButton" name="commandLinkButton_4">

@@ -36,7 +36,9 @@ std::string settingutil::getPortname(){
 }
 
 void settingutil::setHostname(){
-
+    m_settings.beginGroup("/Settings") ;
+    m_settings.setValue("/Hostname",m_hostname);
+    m_settings.endGroup();
 }
 
 void settingutil::setPortname(){
@@ -44,5 +46,7 @@ void settingutil::setPortname(){
 }
 
 void settingutil::setUsername(){
-
+    m_settings.beginGroup("/Settings") ;
+    m_settings.setValue("/Username",m_username);
+    m_settings.endGroup();
 }

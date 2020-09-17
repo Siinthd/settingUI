@@ -1,9 +1,11 @@
 #include "dialog.h"
 #include "ui_dialog.h"
+#include "settings.h"
 
 Dialog::Dialog(QWidget *parent)
     : QDialog(parent,Qt::WindowTitleHint|Qt::WindowSystemMenuHint)
 {
+    settingutil setting;
     m_ptxthostname = new QLineEdit;
     m_ptxtusertname = new QLineEdit;
 
@@ -12,6 +14,7 @@ Dialog::Dialog(QWidget *parent)
 
 
     plblhostname->setBuddy(m_ptxthostname);
+
     plbluserName->setBuddy(m_ptxtusertname);
 
     QPushButton* pcmdOk     = new QPushButton("&Ok");
