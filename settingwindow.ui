@@ -26,7 +26,7 @@
     <bool>false</bool>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>1</number>
    </property>
    <widget class="QWidget" name="setting1">
     <attribute name="title">
@@ -44,7 +44,7 @@
      <property name="title">
       <string>Secify your connection</string>
      </property>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -72,7 +72,7 @@
             <bool>true</bool>
            </property>
            <property name="text">
-            <string>111111</string>
+            <string/>
            </property>
            <property name="maxLength">
             <number>6</number>
@@ -109,7 +109,7 @@
          <item row="1" column="1">
           <widget class="QLineEdit" name="IpAddress">
            <property name="text">
-            <string>255.255.255.255</string>
+            <string/>
            </property>
            <property name="maxLength">
             <number>15</number>
@@ -147,19 +147,6 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QPushButton" name="defaultButton">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>130</y>
-       <width>91</width>
-       <height>24</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Default</string>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="setting2">
     <attribute name="title">
@@ -177,7 +164,7 @@
      <property name="title">
       <string>GroupBox</string>
      </property>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -196,6 +183,9 @@
        </item>
        <item row="1" column="0">
         <widget class="QLineEdit" name="Usename_edit">
+         <property name="text">
+          <string/>
+         </property>
          <property name="maxLength">
           <number>20</number>
          </property>
@@ -206,7 +196,7 @@
     </widget>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>180</x>
@@ -232,40 +222,20 @@
     </item>
    </layout>
   </widget>
+  <widget class="QPushButton" name="defaultButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>220</y>
+     <width>91</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Default</string>
+   </property>
+  </widget>
  </widget>
  <resources/>
- <connections>
-  <connection>
-   <sender>OKbutton</sender>
-   <signal>clicked()</signal>
-   <receiver>SettingWindow</receiver>
-   <slot>accept()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>208</x>
-     <y>382</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>175</x>
-     <y>205</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>CnclButton</sender>
-   <signal>clicked()</signal>
-   <receiver>SettingWindow</receiver>
-   <slot>reject()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>289</x>
-     <y>382</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>175</x>
-     <y>205</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

@@ -17,17 +17,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    dialog.cpp \
     settings.cpp \
     settingwindow.cpp
 
 HEADERS += \
-    dialog.h \
     settings.h \
     settingwindow.h
 
 FORMS += \
-    dialog.ui \
     settingwindow.ui
 
 # Default rules for deployment.

@@ -5,27 +5,27 @@
 // TODO: сделать ui для настройки
 
 class settingutil {
-public:
-  settingutil();
-  ~settingutil() { WriteSettings(); }
-  void ReadSettings();
-  void WriteSettings();
-  void SetDefaultSettings();
+   public:
+    settingutil();
+    ~settingutil() { WriteSettings(); }
+    void ReadSettings();
+    void WriteSettings();
+    void SetDefaultSettings();
 
-  std::string getHostname();
-  void setHostname();
+    std::string getHostname();
+    void setHostname(const QString& value);
 
-  std::string getPortname();
-  void setPortname();
+    std::string getPortname();
+    void setPortname(const QString& value);
 
-  std::string getUsername();
-  void setUsername();
+    std::string getUsername();
+    void setUsername(const QString& value);
 
-private:
-  QSettings m_settings;
-  QString m_hostname;
-  QString m_username;
-  QString m_portname;
+   private:
+    QSettings m_settings;
+    QString m_hostname;
+    QString m_username;
+    QString m_portname;
 };
 
-#endif // SETTINGUTIL_H
+#endif  // SETTINGUTIL_H
