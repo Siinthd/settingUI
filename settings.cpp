@@ -1,40 +1,43 @@
 #include "settings.h"
 
 settingutil::settingutil() : m_settings("settings.ini", QSettings::IniFormat) {
-  SetDefaultSettings();
-  ReadSettings();
+    SetDefaultSettings();
+    ReadSettings();
 }
 
 void settingutil::ReadSettings() {
-  m_settings.beginGroup("/Settings");
-  m_hostname = m_settings.value("/Hostname", "").toString();
-  m_username = m_settings.value("/Username", "").toString();
-  m_settings.endGroup();
+    m_settings.beginGroup("/Settings");
+    m_hostname = m_settings.value("/Hostname", "").toString();
+    m_username = m_settings.value("/Username", "").toString();
+    m_settings.endGroup();
 }
 
 void settingutil::WriteSettings() {
-  m_settings.beginGroup("/Settings");
-  m_settings.setValue("/Hostname", m_hostname);
-  m_settings.setValue("/Username", m_username);
-  m_settings.endGroup();
+    m_settings.beginGroup("/Settings");
+    m_settings.setValue("/Hostname", m_hostname);
+    m_settings.setValue("/Username", m_username);
+    m_settings.endGroup();
 }
 
-void settingutil::SetDefaultSettings() { m_hostname = "localhost:12345"; }
+void settingutil::SetDefaultSettings() {
+    m_hostname = "localhost:12345";
+    m_username = "username";
+}
 std::string settingutil::getHostname() { return m_hostname.toStdString(); }
 std::string settingutil::getUsername() { return m_username.toStdString(); }
 
 std::string settingutil::getPortname() { return m_portname.toStdString(); }
 
 void settingutil::setHostname() {
-  m_settings.beginGroup("/Settings");
-  m_settings.setValue("/Hostname", m_hostname);
-  m_settings.endGroup();
+    m_settings.beginGroup("/Settings");
+    m_settings.setValue("/Hostname", m_hostname);
+    m_settings.endGroup();
 }
 
 void settingutil::setPortname() {}
 
 void settingutil::setUsername() {
-  m_settings.beginGroup("/Settings");
-  m_settings.setValue("/Username", m_username);
-  m_settings.endGroup();
+    m_settings.beginGroup("/Settings");
+    m_settings.setValue("/Username", m_username);
+    m_settings.endGroup();
 }
