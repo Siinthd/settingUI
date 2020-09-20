@@ -18,15 +18,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    butside.cpp \
     main.cpp \
     settings.cpp \
     settingwindow.cpp
 
 HEADERS += \
+    butside.h \
     settings.h \
     settingwindow.h
 
 FORMS += \
+    butside.ui \
     settingwindow.ui
 
 # Default rules for deployment.
