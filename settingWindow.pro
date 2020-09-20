@@ -19,17 +19,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    settingform.cpp \
     settings.cpp \
     settingwindow.cpp
 
 HEADERS += \
-    settingform.h \
     settings.h \
     settingwindow.h
 
 FORMS += \
-    settingform.ui \
     settingwindow.ui
 
 # Default rules for deployment.
