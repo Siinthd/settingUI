@@ -1,5 +1,5 @@
 QT       += core gui
-QT       += quickwidgets
+QT += widgets
 
 
 CONFIG += c++11
@@ -18,18 +18,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    butside.cpp \
     main.cpp \
+    mainwindow.cpp \
     settings.cpp \
-    settingwindow.cpp
+    settingwindow.cpp \
+    sidebar.cpp
 
 HEADERS += \
-    butside.h \
+    mainwindow.h \
     settings.h \
-    settingwindow.h
+    settingwindow.h \
+    sidebar.h
 
 FORMS += \
-    butside.ui \
+    mainwindow.ui \
     settingwindow.ui
 
 # Default rules for deployment.
