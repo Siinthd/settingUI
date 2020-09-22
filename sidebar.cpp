@@ -5,7 +5,7 @@
 #include <QPaintEvent>
 #include <QPainter>
 
-#define action_height 90
+#define action_height 60
 
 SideBar::SideBar(QWidget *parent) :
     QWidget(parent),checkedAction_(nullptr),overAction_(nullptr)
@@ -49,7 +49,7 @@ void SideBar::paintEvent(QPaintEvent *event){
        p.setPen(QColor(255, 255, 255));
        QSize size = p.fontMetrics().size(Qt::TextSingleLine, action->text());
        QRect actionTextRect(QPoint(actionRect.width() / 2 - size.width() / 2,
-                                   actionRect.bottom() - size.height() - 2),
+                                   actionRect.bottom() - size.height() - 25),
                             size);
        p.drawText(actionTextRect, Qt::AlignCenter, action->text());
 
@@ -63,7 +63,6 @@ void SideBar::paintEvent(QPaintEvent *event){
      }
 }
 
-
 void SideBar::mousePressEvent(QMouseEvent *event) {
   QAction *tempAction = actionAt(event->pos());
   if (tempAction == nullptr || tempAction->isChecked())
@@ -75,6 +74,7 @@ void SideBar::mousePressEvent(QMouseEvent *event) {
     overAction_ = nullptr;
   checkedAction_ = tempAction;
   tempAction->setChecked(true);
+   showFrame();
   update();
   QWidget::mousePressEvent(event);
 }
@@ -101,11 +101,28 @@ void SideBar::leaveEvent(QEvent *event) {
 
 QAction *SideBar::actionAt(const QPoint &at) {
   int action_y = 0;
+  int position = 0;
   for (auto action : mActions_) {
     QRect actionRect(0, action_y, rect().width(), action_height);
-    if (actionRect.contains(at))
+    if (actionRect.contains(at)){
+      currentstate = position;
       return action;
+    }
     action_y += actionRect.height();
+    position++;
   }
   return nullptr;
+}
+
+
+void SideBar::showFrame()
+{
+    switch (currentstate)
+    {
+        case 0:emit signal1();break;
+         case 1:emit signal2();break;
+    }
+
+
+
 }
