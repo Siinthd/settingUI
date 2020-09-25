@@ -8,6 +8,8 @@ MainWindow::MainWindow(QWidget *parent)
     ui->widget->addAction(QString("Action 2"));
     ui->widget->addAction(QString("Action 3"));
     ui->widget->addAction(QString("Action 4"));
+    ui->frame_2->hide();
+
     QObject::connect(ui->widget, SIGNAL(signal1()), ui->frame, SLOT(show()));
     QObject::connect(ui->widget, SIGNAL(signal2()), ui->frame, SLOT(hide()));
 

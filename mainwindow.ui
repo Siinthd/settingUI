@@ -186,7 +186,7 @@
       </rect>
      </property>
      <property name="title">
-      <string>GroupBox</string>
+      <string>Account</string>
      </property>
      <widget class="QWidget" name="layoutWidget_2">
       <property name="geometry">
@@ -226,7 +226,7 @@
      <x>0</x>
      <y>0</y>
      <width>475</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
